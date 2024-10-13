@@ -1,3 +1,5 @@
+// 아직 문제 해결은 못했지만 한 거까지 풀어봤어요.
+
 class Car{
     String carName;
     int gas;
