@@ -18,12 +18,15 @@ class Car{
     int move(int gas){
         if(gas<=this.gas){
             this.gas -= gas;
-            return gas;}
-        else {return gas;}
-    };
+            System.out.println(carName + "move, resume gas : " + this.gas);}
+        else {
+            System.out.println(carName + "move, resume gas: " + this.gas);}
+        return gas;
+    }
     int refuel(int amount){
         this.gas += amount;
-        return gas;
+        System.out.println("fuel amount: " + this.gas +", resume fuel: " + amount);
+        return amount;
     };
 }
 
@@ -38,12 +41,15 @@ class Main{
        }
 
        for(int i = 0;i<7;i++){
-           for(Car car:cars){
-               if(car.getGas()){
-
+           for(Car a:cars) {
+               if (a.getGas >= 5) {
+                   a.move(5);
+               } else {
+                   a.move(5);
+                   a.refuel(10);
                }
-               System.out.println();
            }
+               System.out.println();
        }
    }
 }
