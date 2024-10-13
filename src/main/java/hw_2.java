@@ -21,13 +21,11 @@ class Car{
             System.out.println(carName + "move, resume gas : " + this.gas);}
         else {
             System.out.println(carName + "move, resume gas: " + this.gas);}
-        return gas;
     }
     int refuel(int amount){
         this.gas += amount;
         System.out.println("fuel amount: " + this.gas +", resume fuel: " + amount);
-        return amount;
-    };
+    }
 }
 
 class Main{
