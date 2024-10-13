@@ -37,7 +37,7 @@ class Main {
 
         for (int i = 0; i < 7; i++) {
             for (Car a : cars) {
-                if{(a.cars[i] >= 5)
+                if{(a.carGas[i]>= 5)
                     a.move(5);}
                 else{
                     a.move(5);
