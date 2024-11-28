@@ -15,14 +15,14 @@ class Car{
     void setCarName(String carNames) {carName = carNames;}
     String getCarName(){return carName;}
 
-    int move(int gas){
+    void move(int gas){
         if(gas<=this.gas){
             this.gas -= gas;
             System.out.println(carName + "move, resume gas : " + this.gas);}
         else {
             System.out.println(carName + "move, resume gas: " + this.gas);}
     }
-    int refuel(int amount){
+    void refuel(int amount){
         this.gas += amount;
         System.out.println("fuel amount: " + this.gas +", resume fuel: " + amount);
     }
@@ -40,7 +40,7 @@ class Main{
 
         for(int i = 0;i<7;i++){
             for(Car a:cars) {
-                if (a.getGas >= 5) {
+                if (a.getGas() >= 5) {
                     a.move(5);
                 } else {
                     a.move(5);
